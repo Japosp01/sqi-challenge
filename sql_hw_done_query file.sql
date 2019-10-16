@@ -44,19 +44,6 @@ INNER JOIN employees
 ON employees.emp_no = dept_manager.emp_no;
 --above works
 
--- Make the end date more meaningful ...
-
-UPDATE depman
-SET    "End Date" = 'ongoing ..'
-WHERE  "End Date" = '9999-01-01';
-
--- Re-order so that data is displayed chronologically for
--- each department.
-
-SELECT * FROM depman
-ORDER BY "Department No.", "Start Date";
-
-SELECT * FROM depman;
 
 -- 4. List the department of each employee with the following information: 
 --    employee number, last name, first name, and department name.
